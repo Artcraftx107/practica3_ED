@@ -13,7 +13,7 @@
 *
 * Deberías haber recibido una copia de la Licencia Pública General de GNU
 * junto con este programa. Si no es así, consulta <http://www.gnu.org/licenses/>.
-* test*/
+*/
 
 
 package conjunto;
