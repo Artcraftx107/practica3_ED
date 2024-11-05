@@ -1,0 +1,36 @@
+Ejercicio 1
+Entregar ficheros: AbstractQueue.java ArrayQueue.java
+No subir ficheros comprimidos.
+Las pruebas unitarias de esta práctica solo funcionarán en la máquina virtual oficial de la asignatura.
+
+Implementar el TAD Cola (en los ficheros AbstractQueue.java y ArrayQueue.java) genérico (siendo E el tipo de los elementos de la cola) utilizando como estructura de datos interna un array. El TAD Cola implementará los siguientes métodos:
+void enqueue(E item);
+// Agrega un elemento al final de la cola
+// Si el array estuviese lleno entonces redimensiona el array duplicando su tamaño
+
+E dequeue();
+// Elimina y devuelve el elemento en la cabeza de la cola
+// Si el array quedase lleno a menos de la mitad de su capacidad entonces redimensionaría el array a la mitad de tamaño siempre que este sea
+// mayor que INITIAL_CAPACITY
+// Si la cola estuviese vacía entonces elevaría la excepción IllegalStateException
+
+E head();
+// Devuelve el elemento en la cabeza de la cola sin eliminarlo
+// Si la cola estuviese vacía entonces elevaría la excepción IllegalStateException
+
+boolean isEmpty();
+// Devuelve verdadero si la cola esta vacía y falso en caso contrario
+
+int size();
+// Devuelve el número de elementos en la cola
+
+Además, para su correcta integración en Java, implementar los siguientes métodos:
+Constructor. 
+// Inicializa el TAD a una cola vacía con una capacidad (tamaño del array) de INITIAL_CAPACITY
+
+boolean equals(Object obj);
+// Compara dos colas y devuelve verdadero si contienen los mismos elementos en el mismo orden y falso en caso contrario
+
+E[] toArray();
+// Devuelve un array con todos los elementos en la cola en el mismo orden en que fueron introducidos en la cola, esto es,
+// el primer elemento que de encoló está en la posición 0 del array; el segundo en la posición 1 y así sucesivamente

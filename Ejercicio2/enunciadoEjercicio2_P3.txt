@@ -1,0 +1,48 @@
+Ejercicio 2
+Entregar ficheros: AbstractSet.java LinkedListSet.java
+No subir ficheros comprimidos.
+Las pruebas unitarias de esta práctica solo funcionarán en la máquina virtual oficial de la asignatura.
+
+Implementar el TAD Conjunto (Set) en los ficheros AbstractSet.java y LinkedListSet.java). Este TAD debe set un TAD genérico (siendo E el tipo de los elementos de el conjunto) utilizando como estructura de datos interna una lista enlazada. El TAD LinkedListSet implementará los siguientes métodos:
+
+void add(E element);
+// Añade un nuevo elemento al conjunto.
+// Si el conjunto ya tuviese un elemento igual a este entonces no hace nada
+
+void remove(E element);
+// Elimina un elemento del conjunto.
+// Si el conjunto no tuviese un elemento igual a este entonces no hace nada
+
+boolean contains(E element);
+// Devuelve verdadero si el conjunto contiene un elemento igual al recibido como parámetro. Falso en caso contrario
+
+int size();
+// Devuelve el número de elementos del conjunto. Esto es, su cardinalidad
+
+boolean isEmpty();
+// Devuelve verdadero si el conjunto esta vacío. Falso en caso contrario
+
+void clear();
+// Deja el conjunto vacío.
+
+Set<E> union(Set<E> other);
+// Devuelve un nuevo conjunto que contiene la unión entre el conjunto sobre el que se llama al método y el conjunto recibido como parámetro
+
+Set<E> intersection(Set<E> other);
+// Devuelve un nuevo conjunto que contiene la intersección entre el conjunto sobre el que se llama al método y el conjunto recibido como parámetro
+
+Set<E> difference(Set<E> other);
+// Devuelve un nuevo conjunto que contiene la diferencia simétrica entre el conjunto sobre el que se llama al método y el conjunto recibido como parámetro
+
+boolean isSubset(Set<E> other);
+// Devuelve verdadero si el conjunto sobre el que se llama al método es un subconjunto del conjunto recibido como parámetro.
+
+Además, para su correcta integración en Java, implementar los siguientes métodos:
+Constructor. 
+// Inicializa el TAD a un conjunto vacío
+
+boolean equals(Object obj);
+// Compara dos conjuntos y devuelve verdadero si ambos contienen los mismos elementos (independientemente del orden en que estén almacenados internamente) y falso en caso contrario
+
+E[] toArray();
+// Devuelve un array con todos los elementos en el conjunto. El orden en que estén almacenados los elementos en el array es indiferente.
